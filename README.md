@@ -1,3 +1,3 @@
 # 3RingCircus
 
-[Quincy Mapping](docs/Quincy-mapping.md)
+[Quincy Mapping](Quincy-mapping.md)
