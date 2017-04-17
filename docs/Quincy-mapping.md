@@ -9,7 +9,7 @@ title: Quincy CASE UCO mapping
 
 |Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
 |---|---|---|---|---|
-|DisplayName|uco-observable.File|uco-observable.File.fileName|||| //filename
+|DisplayName|uco-observable.File|uco-observable.File.fileName||| //filename
 |FileAttributes||||| //flags vector for readonly, hidden, etc
 |CreationTime|uco-observable.File|uco-observable.File.createdTime|||
 |LastAccessTime|uco-observable.File|uco-observable.File.accessedTime|||
