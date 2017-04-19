@@ -1,3 +1,4 @@
+﻿
 ---
 title: Quincy CASE UCO mapping
 ---
@@ -34,6 +35,22 @@ title: Quincy CASE UCO mapping
 |SlackStart|uco-core.Relationship; uco-observable.DataRange|separate “contained-within” Relationship (name = 'SlackStart') between disk Trace and file Trace with DataRange.rangeOffset||| //byte offset of the start of the slack space for file
 |SlackDataRuns|uco-observable.File; uco-observable.ContentData; uco-observable.DataRange; uco-observable.Fragment; uco-core.Relationship|Trace for the file; separate Trace with name = 'SlackFragment' and ContentData for each byte run; separate “contained-within” Relationship between fragment and image/disk with DataRange property bundle for each byte run; separate “has-fragment” Relationship between file and fragment with Fragment property bundle for each byte run||| //offsets and length for each fragment of slack space of file
 
+### File from NTFS Filesystem
+
+|Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+|StreamNumber|||||
+|StreamName|||||
+|MftModifiedTime|||||
+|MftEntry|||||
+
+### File from EXT Filesystem
+
+|Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+|InodeNumber|||||
+|DirectoryEntryOffset|||||
+
 ### Media (disk image) Object
 
 |Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
@@ -49,7 +66,7 @@ title: Quincy CASE UCO mapping
 |Length|uco-observable.DiskPartition|uco-observable.DiskPartition.partitionLength||[file.json](https://github.com/casework/case/blob/master/examples/file.json)| //size in bytes of space reserved for partition
 |Offset|uco-observable.DiskPartition|uco-observable.DiskPartition.partitionOffset||| //byte address of start of partition within the media/image
 |DisplayName|uco-core.UcoObject.name|name property on the partition Trace|||
-|Bootable|N/A (Gap)&#x1F534;|||| //boolean
+|Bootable|N/A (Gap)|||| //boolean
 |Flags|uco-observable.DiskPartition|uco-observable.DiskPartition.diskPartitionType||| //internal representation (enumeration) for what type of partition
 |FileSystem|uco-observable.FileSystem|uco-observable.FileSystem.fileSystemType||[file.json](https://github.com/casework/case/blob/master/examples/file.json)| //file system on the partition
 |Recovered|uco-action.Action; uco-action.ActionReferences|Action with name = 'Recovered' AND uco-action.ActionReferences.object = id of Partition Trace||| //boolean for whether the partition was reconstituted from other space
@@ -60,8 +77,8 @@ title: Quincy CASE UCO mapping
 
 |Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
 |---|---|---|---|---|
-|AllocatedLength|N/A (Gap)&#x1F534;|||| //maximum potential size in bytes for file system
-|Length|N/A (Gap)&#x1F534;|||| //size in bytes of actual file system including file system metadata structures (bigger than AllocatedLength)
+|AllocatedLength|N/A (Gap)?|||| //maximum potential size in bytes for file system
+|Length|N/A (Gap)?|||| //size in bytes of actual file system including file system metadata structures (bigger than AllocatedLength)
 |VolumeLabel|uco-core.UcoObject.name|name property on the volume Trace|||
 |AllocationUnitSize|uco-observable.FileSystem|uco-observable.FileSystem.clusterSize||| //cluster size in bytes
 |VolumeSerialNumber|uco-observable.Volume|uco-observable.Volume.volumeID||| //unique value issued by some OSs
@@ -69,6 +86,110 @@ title: Quincy CASE UCO mapping
 |FreeSpace|uco-observable.ContentData; uco-observable.DataRange; uco-core.Relationship|separate Trace with name = 'Free Space' and ContentData for each byte run; separate “contained-within” Relationship between free space byte run Trace and image/disk Trace with DataRange property bundle for each byte run||| //data runs of all chunks currently unused
 ||||||
 
+### Operating System
+
+|Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+|Users|||||
+|Applications|||||
+|BackedFiles|||||
+|Servers|||||
+|Drivers|||||
+|HardwareDevices|||||
+|RegisteredAccounts|||||
+|SystemMountPoints|||||
+|NetworkAdapters|||||
+|Printers|||||
+|WirelessNetworks|||||
+
+### Windows Operating System (subtype of Operating System)
+
+|Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+|RecycleBinItems|||||
+|PasswordHashes|||||
+|PreFetchItems|||||
+|ShimCacheItems|||||
+|MachineSID|||||
+|MachineSID|||||
+|CurrentDomain|||||
+|AutoLogon|||||
+|Build|||||
+|ServicePack|||||
+|ProductID|||||
+|ProductActivationKey|||||
+|DefaultUserName|||||
+|RegisteredOwner|||||
+|RegisteredOrganization|||||
+|DefaultUserName|||||
+|DefaultDomainName|||||
+|CurrentControlSetKeyName|||||
+
+### SAM Entry
+
+|Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+|NTPasswordHash|||||
+|UserID|||||
+|UserName|||||
+
+### Application (installed application)
+
+|Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+|DisplayName|||||
+|InstallationDate|||||
+
+### Driver (device driver)
+
+|Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+|DisplayName|||||
+|InstallationDate|||||
+
+### Service (daemon)
+
+|Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+|DisplayName|||||
+|InstallationDate|||||
+|Status|||||
+
+
+### Registry Key
+
+|Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+|Name|||||
+|Keys|||||
+|Values|||||
+|Parent|||||
+|ClassName|||||
+|LastWriteTime|||||
+
+
+### Email Message
+
+|Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+|ReceivedDateGMT|||||
+|Subject|||||
+|From|||||
+|To|||||
+|CC|||||
+|BCC|||||
+|Attachments|||||
+|Content|||||
+
+
+### URL Visit Record
+
+|Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+|URL|||||
+|Visited|||||
+|Server|||||
+
 ### Object type
 
 |Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
@@ -76,73 +197,20 @@ title: Quincy CASE UCO mapping
 ||||||
 ||||||
 ||||||
-
-### Object type
-
-|Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
-|---|---|---|---|---|
-||||||
-||||||
-||||||
-
-### Object type
-
-|Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
-|---|---|---|---|---|
-||||||
-||||||
-||||||
-
-### Object type
-
-|Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
-|---|---|---|---|---|
-||||||
-||||||
-||||||
-
-### Object type
-
-|Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
-|---|---|---|---|---|
-||||||
-||||||
-||||||
-
-### Object type
-
-|Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
-|---|---|---|---|---|
-||||||
-||||||
-||||||
-
 Targets
-- Operating System
+
 - accounts
-- applications
 - chat messages (SMS, MMS, in platform chat)
 - GeoLocation (geoJSON)
-- email messages
-- archives (ZIP, TAR)
-- NTFS
-- EXT
-- HFS+
-- HFSx
+- archives entries (ZIP, TAR) - see "File" above, all extracted file contents adhere to this interface
+- HFS+/HFSx
 - picture files
 - Contacts
-- calendar Entries
+- Calendar Entries
 - phone calls
-- registry
-- URLs
 - Domain names
 - network Connection
-- MAC address
-- ip address
-- DNS
-- TCP sessions
-- HTTP sessions
-- PCAP analysis
+- PCAP
 - exif
 - sqlite
 - certificates (X509, etc.)
