@@ -4,15 +4,21 @@ title: DOMEX-XML CASE UCO mapping
 
 # DOMEX-XML CASE UCO mapping
 
+## Object type
+
+|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+||||||
+||||||
+||||||
 
 ## Collection Metadata mapping
 
-|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|CASE/UCO Example|
-|---|---|---|---|
-|||||
-|||||
-|||||
-|||||
+|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+||||||
+||||||
+||||||
 DOMEXID
 Providing Organization
 Owning Organization
@@ -41,12 +47,11 @@ DoD Operation
 
 ## Micro Collection Location mapping
 
-|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|CASE/UCO Example|
-|---|---|---|---|
-|||||
-|||||
-|||||
-|||||
+|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+||||||
+||||||
+||||||
 Location Narrative
 On Person
 In Vehicle
@@ -56,12 +61,11 @@ Other
 
 ## Media or Device Metadata mapping
 
-|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|CASE/UCO Example|
-|---|---|---|---|
-|||||
-|||||
-|||||
-|||||
+|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+||||||
+||||||
+||||||
 Data Owner
   Person Name
  Phone Number
@@ -111,23 +115,22 @@ Cable/Reference/Message Traffic ID
 
 ## Subject Metadata mapping
 
-|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|CASE/UCO Example|
-|---|---|---|---|
-|Type of Subject||||
-|Classification of the Subject||||
-|FISA Related||||
-|FISA Case ID||||
-|Other ID Type||||
+|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+|Type of Subject|||||
+|Classification of the Subject|||||
+|FISA Related|||||
+|FISA Case ID|||||
+|Other ID Type|||||
 
 
 ## File Metadata mapping
 
-|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|CASE/UCO Example|
-|---|---|---|---|
-|||||
-|||||
-|||||
-|||||
+|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+||||||
+||||||
+||||||
 Harmony Number
 Document Classification
 Title Classification
@@ -217,12 +220,11 @@ Machine Translation Tool
 
 ## Cellular Phone Exploitation Device Metadata mapping
 
-|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|CASE/UCO Example|
-|---|---|---|---|
-|||||
-|||||
-|||||
-|||||
+|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+||||||
+||||||
+||||||
 Manufacturer
 Model
 Extraction Date
@@ -260,51 +262,51 @@ SIM Cards
 
 ### Cellular Phone Exploitation Content: Contacts - Phone book entries mapping
 
-|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|CASE/UCO Example|
-|---|---|---|---|
-|Phone Book Entry:||||
-|Index||||
-|Name||||
-|Number||||
-|Original Name||||
-|Memory Location||||
-|Designation||||
+|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+|Phone Book Entry:|||||
+|Index|||||
+|Name|||||
+|Number|||||
+|Original Name|||||
+|Memory Location|||||
+|Designation|||||
 
 
 ### Cellular Phone Exploitation Content: Call Log Entries mapping
 
-|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|CASE/UCO Example|
-|---|---|---|---|
-|Call Log Entry:||||
-|Index||||
-|Name||||
-|Number||||
-|Original Name||||
-|Date/Time||||
-|Call Log Location||||
-|Memory Location||||
-|Duration||||
-|||||
+|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+|Call Log Entry:|||||
+|Index|||||
+|Name|||||
+|Number|||||
+|Original Name|||||
+|Date/Time|||||
+|Call Log Location|||||
+|Memory Location|||||
+|Duration|||||
 
 ### Cellular Phone Exploitation Content: SMS Messages mapping
 
-|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|CASE/UCO Example|
-|---|---|---|---|
-|SMS Message:||||
-|Number||||
-|Date/Time||||
-|Original Message Text||||
-|Translated Message Text||||
-|Status||||
-|SMS Direction||||
-|Memory Location||||
+|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+|SMS Message:|||||
+|Number|||||
+|Date/Time|||||
+|Original Message Text|||||
+|Translated Message Text|||||
+|Status|||||
+|SMS Direction|||||
+|Memory Location|||||
 
 ### Cellular Phone Exploitation Content: MMS Messages mapping
 
-|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|CASE/UCO Example|
-|---|---|---|---|
-|||||
-|||||
+|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+||||||
+||||||
+||||||
 MMS Message:
 Name
 Number
@@ -319,10 +321,11 @@ Memory Location
 
 ### Cellular Phone Exploitation Content: Calendar Events mapping
 
-|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|CASE/UCO Example|
-|---|---|---|---|
-|||||
-|||||
+|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+||||||
+||||||
+||||||
 Calendar Event:
 Original Title
 Translated Title
@@ -335,20 +338,22 @@ Is Reoccuring
 
 ### Cellular Phone Exploitation Content: URL History mapping
 
-|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|CASE/UCO Example|
-|---|---|---|---|
-|||||
-|||||
+|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+||||||
+||||||
+||||||
 URL History:
 IP
 URL
 
 ### Cellular Phone Exploitation Content: Files mapping
 
-|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|CASE/UCO Example|
-|---|---|---|---|
-|||||
-|||||
+|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+||||||
+||||||
+||||||
 Files:
 File Category
 File Name
@@ -358,10 +363,11 @@ File Size
 
 ### Cellular Phone Exploitation Content: Email Messages mapping
 
-|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|CASE/UCO Example|
-|---|---|---|---|
-|||||
-|||||
+|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+||||||
+||||||
+||||||
 Email Message:
 Name
 From Address
@@ -376,10 +382,11 @@ Memory Location
 
 ### Cellular Phone Exploitation Content: Selectors mapping
 
-|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|CASE/UCO Example|
-|---|---|---|---|
-|||||
-|||||
+|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+||||||
+||||||
+||||||
 Selector
 Realm
 Is Validated
@@ -390,10 +397,11 @@ Selector Raw Value
 
 ### Cellular Phone Exploitation Content: GPS Locations mapping
 
-|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|CASE/UCO Example|
-|---|---|---|---|
-|||||
-|||||
+|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+||||||
+||||||
+||||||
 GPS Locations:
 GPS Way Point
 Way Point Name
@@ -407,30 +415,31 @@ Normalized MGRs
 
 ### Cellular Phone Exploitation Content: Clocks mapping
 
-|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|CASE/UCO Example|
-|---|---|---|---|
-|||||
-|||||
+|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+||||||
+||||||
+||||||
 Clocks
 Location
 Set Time
 
 ### Cellular Phone Exploitation Content: User Defined Tags mapping
 
-|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|CASE/UCO Example|
-|---|---|---|---|
-|||||
-|||||
+|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+||||||
+||||||
+||||||
 User defined tags
 
 ## Content and Analytic Metadata mapping
 
-|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|CASE/UCO Example|
-|---|---|---|---|
-|||||
-|||||
-|||||
-|||||
+|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+||||||
+||||||
+||||||
 Person
 Identity
 Persona
@@ -455,12 +464,11 @@ Event
 
 ## Identity Metadata mapping
 
-|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|CASE/UCO Example|
-|---|---|---|---|
-|||||
-|||||
-|||||
-|||||
+|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+||||||
+||||||
+||||||
 Person
 Name
 Alias (es)
