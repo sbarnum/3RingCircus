@@ -39,17 +39,17 @@ title: Quincy CASE UCO mapping
 
 |Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
 |---|---|---|---|---|
-|StreamNumber|||||
-|StreamName|||||
-|MftModifiedTime|||||
-|MftEntry|||||
+|StreamNumber|**_More information needed_**||||
+|StreamName|**_More information needed_**||||
+|MftModifiedTime|**_More information needed_**||||
+|MftEntry|**_More information needed_**||||
 
 ### File from EXT Filesystem
 
 |Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
 |---|---|---|---|---|
-|InodeNumber|||||
-|DirectoryEntryOffset|||||
+|InodeNumber|uco-observable.ExtInode|uco-observable.ExtInode.extInodeID|||
+|DirectoryEntryOffset|**_More information needed_**||||
 
 ### Media (disk image) Object
 
@@ -57,7 +57,7 @@ title: Quincy CASE UCO mapping
 |---|---|---|---|---|
 |Length|uco-observable.File OR uco-observable.ContentData|uco-observable.File.sizeInBytes (file system asserted) OR uco-observable.ContentData.sizeInBytes (actual)||[file.json](https://github.com/casework/case/blob/master/examples/file.json)| //size in bytes of the original native disk imaged
 |Partitions|uco-core.Relationship|separate “contained-within” Relationship between partition Trace and image/disk with DataRange property bundle for each partition|||
-|DisplayName|_More information needed_||||
+|DisplayName|**_More information needed_**||||
 
 ### Partition Object
 
@@ -66,7 +66,7 @@ title: Quincy CASE UCO mapping
 |Length|uco-observable.DiskPartition|uco-observable.DiskPartition.partitionLength||[file.json](https://github.com/casework/case/blob/master/examples/file.json)| //size in bytes of space reserved for partition
 |Offset|uco-observable.DiskPartition|uco-observable.DiskPartition.partitionOffset||| //byte address of start of partition within the media/image
 |DisplayName|uco-core.UcoObject.name|name property on the partition Trace|||
-|Bootable|N/A (Gap)|||| //boolean
+|Bootable|NA (GAP)&#x1F534;|||| //boolean
 |Flags|uco-observable.DiskPartition|uco-observable.DiskPartition.diskPartitionType||| //internal representation (enumeration) for what type of partition
 |FileSystem|uco-observable.FileSystem|uco-observable.FileSystem.fileSystemType||[file.json](https://github.com/casework/case/blob/master/examples/file.json)| //file system on the partition
 |Recovered|uco-action.Action; uco-action.ActionReferences|Action with name = 'Recovered' AND uco-action.ActionReferences.object = id of Partition Trace||| //boolean for whether the partition was reconstituted from other space
@@ -77,8 +77,8 @@ title: Quincy CASE UCO mapping
 
 |Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
 |---|---|---|---|---|
-|AllocatedLength|N/A (Gap)?|||| //maximum potential size in bytes for file system
-|Length|N/A (Gap)?|||| //size in bytes of actual file system including file system metadata structures (bigger than AllocatedLength)
+|AllocatedLength|NA (GAP)&#x1F534;|||| //maximum potential size in bytes for file system
+|Length|NA (GAP)&#x1F534;|||| //size in bytes of actual file system including file system metadata structures (bigger than AllocatedLength)
 |VolumeLabel|uco-core.UcoObject.name|name property on the volume Trace|||
 |AllocationUnitSize|uco-observable.FileSystem|uco-observable.FileSystem.clusterSize||| //cluster size in bytes
 |VolumeSerialNumber|uco-observable.Volume|uco-observable.Volume.volumeID||| //unique value issued by some OSs
@@ -90,27 +90,26 @@ title: Quincy CASE UCO mapping
 
 |Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
 |---|---|---|---|---|
-|Users|||||
-|Applications|||||
-|BackedFiles|||||
-|Servers|||||
-|Drivers|||||
-|HardwareDevices|||||
-|RegisteredAccounts|||||
-|SystemMountPoints|||||
-|NetworkAdapters|||||
-|Printers|||||
-|WirelessNetworks|||||
+|Users|uco-observable.Account; uco-observable.DigitalAccount; uco-observable.UserAccount; uco-core.Relationship|separate OS and user account Traces AND "has-account" Relationship object linking them|||
+|Applications|uco-observable.Application;uco-observable.Software;uco-core.Relationship|separate OS and Application Traces AND single Relationship object linking them|||
+|BackedFiles|**_More information needed_**||||
+|Servers|**_More information needed_**||||
+|Drivers|NA (GAP)&#x1F534;||||
+|HardwareDevices|**_More information needed_**||||
+|RegisteredAccounts|**_More information needed_**||||
+|SystemMountPoints|**_More information needed_**||||
+|NetworkAdapters|**_More information needed_**||||
+|Printers|uco-observable.Device;uco-core.Relationship|separate printer OS and printer Device Trace AND Relationship object linking them|||
+|WirelessNetworks|**_More information needed_**||||
 
-### Windows Operating System (subtype of Operating System)
+### Windows Operating System (subtype of Operating System) : NA (GAP)&#x1F534;
 
 |Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
 |---|---|---|---|---|
-|RecycleBinItems|||||
+|RecycleBinItems|uco-observable.CyberItem(Trace);uco-core.Relationship|separate OS and recycle bin file Traces AND single Relationship object linking the OS trace to the file traces|||
 |PasswordHashes|||||
-|PreFetchItems|||||
+|PreFetchItems|uco-observable.WindowsPrefetch;uco-core.Relationship|separate OS and Prefetch Traces AND single Relationship object linking the OS trace to the Prefetch traces|||
 |ShimCacheItems|||||
-|MachineSID|||||
 |MachineSID|||||
 |CurrentDomain|||||
 |AutoLogon|||||
@@ -125,70 +124,70 @@ title: Quincy CASE UCO mapping
 |DefaultDomainName|||||
 |CurrentControlSetKeyName|||||
 
-### SAM Entry
+### SAM Entry  : NA (GAP)&#x1F534;
 
 |Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
 |---|---|---|---|---|
-|NTPasswordHash|||||
-|UserID|||||
-|UserName|||||
+|NTPasswordHash|NA (GAP)&#x1F534||||
+|UserID|NA (GAP)&#x1F534||||
+|UserName|NA (GAP)&#x1F534||||
 
 ### Application (installed application)
 
 |Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
 |---|---|---|---|---|
-|DisplayName|||||
+|DisplayName|uco-core.UcoObject|uco-core.UcoObject.name|||
 |InstallationDate|||||
 
-### Driver (device driver)
+### Driver (device driver) : NA (GAP)&#x1F534;
 
 |Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
 |---|---|---|---|---|
-|DisplayName|||||
-|InstallationDate|||||
+|DisplayName|uco-core.UcoObject|uco-core.UcoObject.name|||
+|InstallationDate|NA (GAP)&#x1F534||||
 
-### Service (daemon)
+### Service (daemon) : NA (GAP)&#x1F534;
 
 |Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
 |---|---|---|---|---|
-|DisplayName|||||
-|InstallationDate|||||
-|Status|||||
+|DisplayName|uco-core.UcoObject|uco-core.UcoObject.name|||
+|InstallationDate|NA (GAP)&#x1F534||||
+|Status|NA (GAP)&#x1F534||||
 
 
 ### Registry Key
 
 |Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
 |---|---|---|---|---|
-|Name|||||
-|Keys|||||
-|Values|||||
-|Parent|||||
-|ClassName|||||
-|LastWriteTime|||||
+|Name|uco-core.UcoObject.name|name property on the registry key Trace|||
+|Keys|uco-observable.WindowsRegistryKey;uco-core.Relationship|separate Traces for each subkey AND single Relationship object linking the key trace to all of the subkey traces|||
+|Values|uco-observable.WindowsRegistryKey|uco-observable.WindowsRegistryKey.values|||
+|Parent|uco-observable.WindowsRegistryKey;uco-core.Relationship|Defined by the same Relationship used for Keys above|||
+|ClassName|**_More information needed_**||||
+|LastWriteTime|uco-observable.WindowsRegistryKey|uco-observable.WindowsRegistryKey.modifiedTime|||
 
 
 ### Email Message
 
 |Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
 |---|---|---|---|---|
-|ReceivedDateGMT|||||
-|Subject|||||
-|From|||||
-|To|||||
-|CC|||||
-|BCC|||||
-|Attachments|||||
-|Content|||||
+|ReceivedDateGMT|uco-observable.EmailMessage|uco-observable.EmailMessage.receivedTime|||
+|Subject|uco-observable.EmailMessage|uco-observable.EmailMessage.subject|||
+|From|uco-observable.EmailMessage|uco-observable.EmailMessage.from|||
+|To|uco-observable.EmailMessage|uco-observable.EmailMessage.to|||
+|CC|uco-observable.EmailMessage|uco-observable.EmailMessage.cc|||
+|BCC|uco-observable.EmailMessage|uco-observable.EmailMessage.bcc|||
+|Attachments|uco-observable.CyberItem(Trace);uco-core.Relationship|separate Traces for each attachment AND single Relationship object linking the email message trace to all of the attachment traces|||
+|Content|uco-observable.EmailMessage|uco-observable.EmailMessage.bodyMultipart OR uco-observable.EmailMessage.bodyRaw depending on context|||
 
 
 ### URL Visit Record
 
 |Quincy|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
 |---|---|---|---|---|
-|URL|||||
-|Visited|||||
-|Server|||||
+|URL|uco-observable.URL|uco-observable.URL.fullValue|||
+|Visited|**_More information needed_**||||
+|Server|**_More information needed_**||||
 
 ### Object type
 
@@ -197,6 +196,7 @@ title: Quincy CASE UCO mapping
 ||||||
 ||||||
 ||||||
+
 Targets
 
 - accounts
@@ -214,3 +214,12 @@ Targets
 - exif
 - sqlite
 - certificates (X509, etc.)
+
+
+## Identified Gaps
+
+- Windows OS-specific properties
+- Windows Security Account Manager (SAM) Entry properties
+- Device Driver properties
+- Service (daemon) properties
+- URL Visit Record
