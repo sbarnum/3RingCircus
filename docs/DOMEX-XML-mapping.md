@@ -4,36 +4,38 @@ title: DOMEX-XML CASE UCO mapping
 
 # DOMEX-XML CASE UCO mapping
 
-## Object type
+## Concept mappings
 
-|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
-|---|---|---|---|---|
-||||||
-||||||
-||||||
+|DOMEX-XML|CASE/UCO|
+|:---|:---|
+|Collection|Investigation|
+|MicroCollectionLocation|N/A (GAP)  ; Propose new generalized location facet/property bundle|
+|Media or Device Metadata||
+|Subject Metadata||
+|File Metadata||
+|Cellular Phone Exploitation Metadata||
+|||
+|||
 
 ## Collection Metadata mapping
 
 |DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
 |---|---|---|---|---|
-||||||
-||||||
-||||||
-|DOMEXID|||||
+|DOMEXID|uco-core.UcoObject|uco-investigation.Investigation.id|||
 |Providing Organization|||||
 |Owning Organization|||||
-|Collection Name|||||
+|Collection Name|uco-core.UcoObject|uco-investigation.Investigation.name|||
 |Batch Name|||||
 |Collection ID Number|||||
 |Date Acquired|||||
 |Collection Location Coordinates|||||
 |Collection Country|||||
-|Collection Description|||||
-|Draft|||||
-|Contains Objectionable Material|||||
-|Contains suspected CP data|||||
-|Contains US Persons Data|||||
-|Restricted|||||
+|Collection Description|uco-core.UcoObject|uco-investigation.Investigation.description|||
+|Draft(Boolean)|||||
+|Contains Objectionable Material(Boolean)|||||
+|Contains suspected CP data(Boolean)|||||
+|Contains US Persons Data(Boolean)|||||
+|Restricted(Boolean)|||||
 |Acquisition Details|||||
 |Number of Components|||||
 |Legal Title|||||
@@ -49,23 +51,17 @@ title: DOMEX-XML CASE UCO mapping
 
 |DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
 |---|---|---|---|---|
-||||||
-||||||
-||||||
-|Location Narrative
-|On Person
-|In Vehicle
-|At Building
-|On Battlefield
-|Other
+|Location Narrative||||||
+|On Person||||||
+|In Vehicle||||||
+|At Building||||||
+|On Battlefield||||||
+|Other||||||
 
 ## Media or Device Metadata mapping
 
 |DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
 |---|---|---|---|---|
-||||||
-||||||
-||||||
 |Data Owner||||||
 |  Person Name||||||
 |  Phone Number||||||
@@ -128,9 +124,6 @@ title: DOMEX-XML CASE UCO mapping
 
 |DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
 |---|---|---|---|---|
-||||||
-||||||
-||||||
 |Harmony Number||||||
 |Document Classification||||||
 |Title Classification||||||
@@ -222,9 +215,6 @@ title: DOMEX-XML CASE UCO mapping
 
 |DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
 |---|---|---|---|---|
-||||||
-||||||
-||||||
 |Manufacturer||||||
 |Model||||||
 |Extraction Date||||||
@@ -454,3 +444,36 @@ title: DOMEX-XML CASE UCO mapping
 |     Reference Number/Control ID||||||
 |     Biometric Link||||||
 |     Remark||||||
+
+## DDMS Security Attributes
+
+|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+|classification|||||
+|ownerProducer|||||
+|joint|||||
+|SCIcontrols|||||
+|SARIdentifier|||||
+|atomicEnergyMarkings|||||
+|disseminationControls|||||
+|displayOnlyTo|||||
+|FGISourceOpen|||||
+|FGISourceProtected|||||
+|releasableTo|||||
+|nonICmarkings|||||
+|classifiedBy|||||
+|compilationReason|||||
+|derivativelyClassifiedBy|||||
+|nonUSControls|||||
+|derivedFrom|||||
+|declassDate|||||
+|declassEvent|||||
+|declassException|||||
+
+## Object type
+
+|DOMEX-XML|CASE/UCO Class|CASE/UCO Property|Mapping Examples|CASE/UCO Example|
+|---|---|---|---|---|
+||||||
+||||||
+||||||
